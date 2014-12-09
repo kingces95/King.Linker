@@ -84,6 +84,14 @@
       <Project>{16a42ced-a967-4116-a071-08286cbca2fd}</Project>
       <Name>Library.Android</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Library.Pcl.Target\Library.Pcl.Target.csproj">
+      <Project>{7002eb64-46c2-451b-8118-e628daaa9d90}</Project>
+      <Name>Library.Pcl.Target</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library.Pcl\Library.Pcl.csproj">
+      <Project>{ac2e69f4-6ddc-4356-9ccd-900bdd924c0d}</Project>
+      <Name>Library.Pcl</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

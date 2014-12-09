@@ -8,6 +8,7 @@ using Android.OS;
 using Library.Android;
 
 namespace Application.Android {
+
     [Activity(Label = "Application.Android", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity {
         int count = 1;
@@ -39,6 +40,8 @@ namespace Application.Android {
             Button button = FindViewById<Button>(Resource.Id.MyButton);
 
             button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+
+            var foo = typeof(Library.Pcl.MyClass);
         }
     }
 
