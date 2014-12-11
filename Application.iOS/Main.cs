@@ -14,7 +14,7 @@ namespace Application.iOS {
             
             //var fooAqn = typeof(Foo).AssemblyQualifiedName;
             var fooAqn = "Application.iOS.Foo, ApplicationiOS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null";
-            var fooType = Type.GetType(fooAqn); // ok. Expected fooType is null. Actual is fooType null.
+            var fooType = Type.GetType(fooAqn); // ok. Expected fooType is null. Actual fooType is null.
 
             //var viewAqn = typeof(UIViewSubclass).AssemblyQualifiedName;
             var viewAqn = "Application.iOS.UIViewSubclass, ApplicationiOS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null";
