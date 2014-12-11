@@ -6,6 +6,8 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Library.Android;
+using Library.Pcl;
+using System.Reflection;
 
 namespace Application.Android {
 
@@ -15,6 +17,24 @@ namespace Application.Android {
 
         protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);
+
+            //var roots = new Type[] {
+            //    typeof(PreserveThisType),
+            //    typeof(PreserveThisTypeAndSomeMembers),
+            //    typeof(PreserveThisTypeAndAllMembers),
+            //};
+
+            var preserveThisTypeAqn = "Library.Pcl.PreserveThisType, Library.Pcl.Target, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null";
+            var preserveThisType = Type.GetType(preserveThisTypeAqn); 
+            var preserveThisTypeMembers = preserveThisType.GetMembers(BindingFlags.DeclaredOnly);
+
+            var preserveThisTypeAndSomeMembersAqn = "Library.Pcl.PreserveThisTypeAndSomeMembers, Library.Pcl.Target, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null";
+            var preserveThisTypeAndSomeMembers = Type.GetType(preserveThisTypeAndSomeMembersAqn); 
+            var preserveThisTypeAndSomeMembersMembers = preserveThisTypeAndSomeMembers.GetMembers(BindingFlags.DeclaredOnly);
+
+            var preserveThisTypeAndAllMembersAqn = "Library.Pcl.PreserveThisTypeAndAllMembers, Library.Pcl.Target, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null";
+            var preserveThisTypeAndAllMembers = Type.GetType(preserveThisTypeAndAllMembersAqn); 
+            var preserveThisTypeAndAllMembersMembers = preserveThisTypeAndAllMembers.GetMembers(BindingFlags.DeclaredOnly);
 
             //var fooAqn = typeof(Foo).AssemblyQualifiedName;
             var fooAqn = "Application.Android.Foo, Application.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null";
